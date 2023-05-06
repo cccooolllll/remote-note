@@ -49,7 +49,7 @@ $ git config --global user.email "Email"		#设置邮箱,去掉--global仅对当�
 
 <a href="#git status">`git status`</a>: 查看在你上次提交之后是否有对文件进行再次修改
 
-`git diff`: 比较文件在暂存区和工作区的差异
+<a href="git diff">`git diff`</a>: 比较文件在暂存区和工作区的差异
 
 `git ls-files`: 查看暂存区的文件
 
@@ -78,6 +78,28 @@ $ git add .
 ```
 $ git status	#查看状态
 
-$ git commit -m "提交"	#z
+$ git status -s		#查看详细文件状态
+此命令下：
+A 表示新提交
+M 表示提交过，并且本地又修改了
+AM 表示有改动
+?? 表示有未知的新添加文件
+
+$ git commit -m "提交"	#再次提交
+```
+
+#### <a id="git diff">git diff</a>
+
+比较文件的不同, 即比较文件在暂存区和工作区的差异
+
+git diff 显示已经写入暂存区和已经被修改但尚未写入暂存区文件的区别
+
+应用场景:
+
+```
+git diff	尚未缓存的改动
+git diff --cached		查看已经缓存的改动
+git diff HEAD		查看缓存成功和未缓存的所有改动
+git diff --stat		显示摘要而非整个diff
 ```
 
