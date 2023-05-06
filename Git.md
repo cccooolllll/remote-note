@@ -51,13 +51,13 @@ $ git config --global user.email "Email"		#设置邮箱,去掉--global仅对当�
 
 <a href="git diff">`git diff`</a>: 比较文件在暂存区和工作区的差异
 
-`git ls-files`: 查看暂存区的文件
+<a href="#git ls-files">`git ls-files`</a>: 查看暂存区的文件
 
-`git cat-file -p`: 查看暂存区文件中的内容
+<a href="#git cat-file -p">`git cat-file -p`</a>: 查看暂存区文件中的内容
 
-`git commit`: 提交暂存区文件到本地仓库
+<a href="#git commit">`git commit`</a>: 提交暂存区文件到本地仓库
 
-`git rm`: 删除文件
+<a href="#git rm">`git rm`</a>: 删除文件
 
 
 
@@ -97,9 +97,72 @@ git diff 显示已经写入暂存区和已经被修改但尚未写入暂存区�
 应用场景:
 
 ```
-git diff	尚未缓存的改动
-git diff --cached		查看已经缓存的改动
-git diff HEAD		查看缓存成功和未缓存的所有改动
-git diff --stat		显示摘要而非整个diff
+git diff		#尚未缓存的改动
+git diff --cached		#查看已经缓存的改动
+git diff HEAD		#查看缓存成功和未缓存的所有改动
+git diff --stat		#显示摘要而非整个diff
 ```
 
+#### <a id="git ls-files">git ls-files</a>
+
+查看暂存区的文件
+
+```
+$ git ls-files
+```
+
+可选参数:
+
+- -c: 默认
+- -d: 显示删除的文件
+- -m: 显示被修改过的文件
+- -o: 显示没有被 git 跟踪过的文件
+- -s: 显示 mode 以及对应的 Blog对象, 进而可以获取暂存区中对应文件的内容
+
+#### <a id="git cat-file -p">git cat-file -p</a>
+
+查看暂存区文件中的内容
+
+```
+$ git ls-files -s
+100644 5849920a9afa621d7ec9519a16b24a2009d56a9b 0       README.md
+
+$ git cat-file -p 5849	#可以看到是长字符串的前四位数或者更多
+# remote-note
+远程仓库笔记
+```
+
+#### <a id="git commit">git commit</a>
+
+提交暂存区文件到本地仓库
+
+```
+$ git commit -m [message]
+```
+
+提交暂存区的指定文件到本地仓库
+
+```
+$ git commit [file1] [file2] ... -m [message]
+```
+
+#### <a id="git rm">git rm</a>
+
+1、将文件从暂存区和工作区中删除
+
+```
+$ git rm 1.txt 2.txt
+```
+
+2、将文件从暂存区和工作区中强制删除
+
+```
+# 可以加上 -f, 表示强制删除之前修改过而且 add 到暂存区的文件
+$ git rm -f 1.txt 2.txt
+```
+
+3、将文件从暂存区删除，在工作区保留
+
+```
+git rm --cached 1.txt 2.txt
+```
