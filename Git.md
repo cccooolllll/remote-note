@@ -39,11 +39,15 @@ $ git config --global user.name "UserName"		#设置用户名，去掉--global仅
 $ git config --global user.email "Email"		#设置邮箱,去掉--global仅对当前仓库生效
 ```
 
+配置SSH代理
+
+
+
 ### Git常用命令
 
 <a href="#git add">`git add`</a>: 将文件添加到暂存区
 
-`git status`: 查看在你上次提交之后是否有对文件进行再次修改
+<a href="#git status">`git status`</a>: 查看在你上次提交之后是否有对文件进行再次修改
 
 `git diff`: 比较文件在暂存区和工作区的差异
 
@@ -60,7 +64,20 @@ $ git config --global user.email "Email"		#设置邮箱,去掉--global仅对当�
 #### <a id="git add">git add</a>
 
 ```
-$ git add <file>    #添加单个文件到缓存区，文件必须包含扩展名
-$ git add .         #添加文件夹中所有内容到缓存区
+# 1. 添加单个文件到缓存区，文件必须包含扩展名
+$ git add <file>    
+
+# 2. 添加文件夹中所有内容到缓存区
+$ git add .         
+```
+
+#### <a id="git status">git status</a>
+
+查看自从上次提交过之后，是否对文件进行再次修改，并提示修改过的文件
+
+```
+$ git status	#查看状态
+
+$ git commit -m "提交"	#z
 ```
 
