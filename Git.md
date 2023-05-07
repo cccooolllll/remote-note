@@ -169,19 +169,27 @@ git rm --cached README.md
 
 ### 分支操作
 
+#### 基本命令
+
 ```
 # 查看分支
 $ git branch -a 
 
-# 基于当前分支创建一个新分支
-$ git checkout -b feature/hotfix-001
+# 查看所有分支
+$ git branch -v
 
-# 基于指定分支创建一个新的分支
-$ git checkout -b feature/hotfix-002 master
+# 新建分支
+$ git branch branchName
+
+# 创建分支，并切换到该分支
+$ git checkout -b branchName
 
 # 切换分支
-$ git checkout master
+$ git checkout branchName
 
 # 删除分支
-$ git branch -d feature/hotfix-001
+$ git branch -d branchName
 ```
+
+#### 分支的合并与冲突
+
