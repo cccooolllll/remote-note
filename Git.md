@@ -221,6 +221,17 @@ $ git merge order		#将order合并到master分支
 444
 
 #冲突解决后，再次提交代码
-$
+$ git commit -a
 ```
+
+
+
+
+
+
+
+**参考**:
+
+1. [尚硅谷新版Git快速入门(3h迅速掌握git)](https://www.bilibili.com/video/BV1wm4y1z7Dg)
+2. [Github:KinoMin/bigdata-learning-notes](https://github.com/KinoMin/bigdata-learning-notes/blob/master/note/git/git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C.md)
 
