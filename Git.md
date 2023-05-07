@@ -151,18 +151,37 @@ $ git commit [file1] [file2] ... -m [message]
 1、将文件从暂存区和工作区中删除
 
 ```
-$ git rm 1.txt 2.txt
+$ git rm README.md
 ```
 
 2、将文件从暂存区和工作区中强制删除
 
 ```
 # 可以加上 -f, 表示强制删除之前修改过而且 add 到暂存区的文件
-$ git rm -f 1.txt 2.txt
+$ git rm -f README.md
 ```
 
 3、将文件从暂存区删除，在工作区保留
 
 ```
-git rm --cached 1.txt 2.txt
+git rm --cached README.md
+```
+
+### 分支操作
+
+```
+# 查看分支
+$ git branch -a 
+
+# 基于当前分支创建一个新分支
+$ git checkout -b feature/hotfix-001
+
+# 基于指定分支创建一个新的分支
+$ git checkout -b feature/hotfix-002 master
+
+# 切换分支
+$ git checkout master
+
+# 删除分支
+$ git branch -d feature/hotfix-001
 ```
