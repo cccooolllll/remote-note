@@ -1,4 +1,4 @@
-git 有四个区域:
+it 有四个区域:
 
 - 3个本地区域
   - 工作区(Workspace): 存放项目代码的地方。
@@ -221,10 +221,8 @@ $ git merge order		#将order合并到master分支
 444
 
 #冲突解决后，再次提交代码
-$ git commit -a
+$ git commit -
 ```
-
-
 
 
 
